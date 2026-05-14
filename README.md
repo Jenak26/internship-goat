@@ -14,8 +14,8 @@ InternshipGOAT polls the public job APIs of 53 top companies every 10 minutes vi
 - Filters for **India-relevant** locations (Bangalore, Hyderabad, Delhi, Remote, etc.)
 - Optional **tech-role filter** to skip non-technical positions
 - Optional **graduation year filter** (e.g. 2028-batch only)
-- **Telegram bot commands** to control everything on the fly
-- Runs **24/7 on GitHub Actions** — free, no server needed
+- **Telegram bot commands** respond instantly 24/7 from any device
+- Fully free — GitHub Actions for scanning, Render for the bot, UptimeRobot to keep it alive
 
 ---
 
@@ -57,29 +57,31 @@ InternshipGOAT polls the public job APIs of 53 top companies every 10 minutes vi
 ## How It Works
 
 ```
-GitHub Actions (every 10 min)
-        │
-        ▼
-  notifier.py
-        │
-        ├── Greenhouse API  ──┐
-        ├── Lever API         ├── Parallel fetch all 53 companies
-        ├── Ashby API         │
-        └── SmartRecruiters ──┘
-        │
-        ▼
-  Filter jobs:
-  ✓ New (not in seen_jobs.json)?
-  ✓ Intern / new-grad title?
-  ✓ Tech role?
-  ✓ India-relevant location?
-  ✓ Right graduation year?
-        │
-        ▼
-  Telegram alert sent → seen_jobs.json updated → committed back to repo
-```
+┌─────────────────────────────────────────────────────┐
+│         GitHub Actions  (every 10 minutes)          │
+│                                                     │
+│  notifier.py                                        │
+│    ├── Greenhouse API ──┐                           │
+│    ├── Lever API         ├── parallel fetch         │
+│    ├── Ashby API         │                          │
+│    └── SmartRecruiters ──┘                          │
+│         ↓                                           │
+│    filter: intern? tech? India? right year?         │
+│         ↓                                           │
+│    new job → Telegram alert                         │
+│    seen_jobs.json updated → committed to repo       │
+└─────────────────────────────────────────────────────┘
 
-Your local `listen.py` runs separately and handles bot commands in real time (the GitHub Actions scanner only sends job alerts, not command responses).
+┌─────────────────────────────────────────────────────┐
+│              Render.com  (always on)                │
+│                                                     │
+│  listen.py  — polls Telegram every 2 seconds        │
+│    /rolesactive → scans all 53 companies on demand  │
+│    /filter, /help, /list, /status → instant reply   │
+│                                                     │
+│  UptimeRobot pings /health every 5 min → no sleep  │
+└─────────────────────────────────────────────────────┘
+```
 
 ---
 
@@ -137,50 +139,74 @@ python notifier.py --force
 
 This sends alerts for everything matching your filters right now (good for verifying it works).
 
-### 7. Start the bot listener (for commands)
-
-```bash
-python listen.py
-```
-
-Keep this running locally. Now you can use all the `/commands` in Telegram.
-
 ---
 
-## 24/7 Setup via GitHub Actions (scanner runs even with laptop off)
+## 24/7 Setup — Scanner (GitHub Actions)
 
-This is the main value-add — the scanner runs on GitHub's free compute every 10 minutes, no laptop needed.
+The scanner runs on GitHub's free compute every 10 minutes — no laptop needed.
 
 ### 1. Fork this repo
 
 Click **Fork** at the top right of this GitHub page.
 
-### 2. Push your local changes to your fork
+### 2. Add secrets to your fork
 
-If you cloned and made changes (your own `.env`, companies, etc.):
-```bash
-git remote set-url origin https://github.com/YOUR_USERNAME/internship-goat.git
-git push -u origin main
-```
-
-### 3. Add secrets to GitHub
-
-Go to your fork → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**
+Go to **Settings → Secrets and variables → Actions → New repository secret**
 
 | Secret name | Value |
 |---|---|
 | `TELEGRAM_BOT_TOKEN` | Your bot token from @BotFather |
 | `TELEGRAM_CHAT_ID` | Your chat ID (from `get_chat_id.py`) |
 
-### 4. Enable Actions
+### 3. Enable Actions
 
 Go to the **Actions** tab in your fork and click **"I understand my workflows, go ahead and enable them"** if prompted.
 
-### 5. Trigger first run
+### 4. Trigger first run
 
-In the Actions tab, click **InternshipGOAT — Job Scanner** → **Run workflow**.
+In the Actions tab, click **InternshipGOAT — Job Scanner → Run workflow**.
 
-That's it. The scanner now runs every 10 minutes automatically. Check the Actions tab to see run history and logs.
+The scanner now runs every 10 minutes automatically.
+
+---
+
+## 24/7 Setup — Bot Commands (Render)
+
+The bot listener runs on Render's free tier so commands like `/rolesactive` and `/filter` work from your phone even with your laptop off.
+
+### 1. Sign up at render.com with GitHub (no credit card needed)
+
+### 2. New Web Service
+
+- Click **New → Web Service**
+- Connect your forked GitHub repo
+- **Build Command:** `pip install -r requirements.txt`
+- **Start Command:** `python listen.py`
+- **Instance Type:** Free
+
+### 3. Add environment variables
+
+In the Render dashboard before deploying:
+
+| Key | Value |
+|---|---|
+| `TELEGRAM_BOT_TOKEN` | Your bot token |
+| `TELEGRAM_CHAT_ID` | Your chat ID |
+
+### 4. Deploy
+
+Click **Deploy**. Once it shows green, test with `/help` in Telegram.
+
+### 5. Keep it awake with UptimeRobot
+
+Render's free tier sleeps after 15 minutes of inactivity. Fix this for free:
+
+1. Sign up at **uptimerobot.com**
+2. **Add New Monitor → HTTP(s)**
+3. URL: your Render app URL (e.g. `https://internship-goat-bot.onrender.com`)
+4. Interval: **5 minutes**
+
+That's it — UptimeRobot pings the health endpoint every 5 minutes and Render never sleeps.
 
 ---
 
@@ -240,15 +266,16 @@ Visit the company's careers page and look at the URL or the "Apply" button redir
 ## File Structure
 
 ```
-notifier.py              — Main scanner (runs via GitHub Actions)
-listen.py                — Telegram bot listener (run locally for commands)
+notifier.py              — Main scanner (GitHub Actions, every 10 min)
+listen.py                — Telegram bot listener (Render, always on)
 add_company.py           — CLI to add new companies
 get_chat_id.py           — One-time helper to find your Telegram chat ID
 companies.yaml           — 53 companies with ATS configs
-portals.yaml             — 130+ manual career portal links (for companies without public APIs)
+portals.yaml             — 130+ manual career portal links (companies without public APIs)
 seen_jobs.json           — Dedup state (auto-managed, committed by Actions)
 config.json              — Filter settings (auto-managed by bot commands)
 requirements.txt         — httpx, pyyaml
+render.yaml              — Render deployment config
 .env                     — Secrets (gitignored — never commit this)
 .github/workflows/
   scan.yml               — GitHub Actions cron (every 10 min)
@@ -267,8 +294,8 @@ requirements.txt         — httpx, pyyaml
 ## Security Notes
 
 - **Never commit your `.env` file** — it's in `.gitignore` for a reason.
-- Store your bot token and chat ID only in `.env` locally and as GitHub Secrets for Actions.
-- If your bot token gets exposed (e.g. shared in a chat), regenerate it immediately via @BotFather — old tokens are instantly invalidated.
+- Store your bot token and chat ID only in `.env` locally, as GitHub Secrets for Actions, and as Render environment variables.
+- If your bot token gets exposed, regenerate it immediately via @BotFather — old tokens are instantly invalidated.
 
 ---
 
