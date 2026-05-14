@@ -13,8 +13,9 @@ Commands:
     /help   /list   /add   /remove   /filter   /status
 """
 
-import os, json, asyncio, logging, signal, sys
+import os, json, asyncio, logging, signal, sys, threading
 from pathlib import Path
+from http.server import HTTPServer, BaseHTTPRequestHandler
 
 import httpx, yaml
 
@@ -659,7 +660,16 @@ async def main():
 
     log.info("Listener stopped.")
 
+def _start_health_server():
+    port = int(os.environ.get("PORT", 8080))
+    class H(BaseHTTPRequestHandler):
+        def do_GET(self):
+            self.send_response(200); self.end_headers(); self.wfile.write(b"OK")
+        def log_message(self, *a): pass
+    HTTPServer(("0.0.0.0", port), H).serve_forever()
+
 if __name__ == "__main__":
+    threading.Thread(target=_start_health_server, daemon=True).start()
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
