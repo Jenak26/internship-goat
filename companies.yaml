@@ -1,0 +1,384 @@
+# InternshipGOAT — Verified Company List
+# Every entry below was live-tested and confirmed working.
+# Dead tokens removed (47 companies moved ATS) — add back with: python add_company.py
+#
+# Fields:
+#   india_company: true  → Indian company, alert ALL roles regardless of location
+#   global_ok    : true  → elite firm where all global postings are worth seeing
+#   (neither)    : alert only if location matches India cities or remote
+
+companies:
+
+  # ── FAANG+ / Big Tech ──────────────────────────────────────────────────────
+  - name: Netflix
+    ats: lever
+    token: netflix
+    category: FAANG+
+    india_company: false
+    global_ok: false
+
+  - name: Airbnb
+    ats: greenhouse
+    token: airbnb
+    category: FAANG+
+    india_company: false
+    global_ok: false
+
+  - name: Dropbox
+    ats: greenhouse
+    token: dropbox
+    category: FAANG+
+    india_company: false
+    global_ok: false
+
+  - name: Spotify
+    ats: lever
+    token: spotify
+    category: FAANG+
+    india_company: false
+    global_ok: false
+
+  - name: Twilio
+    ats: greenhouse
+    token: twilio
+    category: FAANG+
+    india_company: false
+    global_ok: false
+
+  - name: Cloudflare
+    ats: greenhouse
+    token: cloudflare
+    category: FAANG+
+    india_company: false
+    global_ok: false
+
+  - name: Databricks
+    ats: greenhouse
+    token: databricks
+    category: FAANG+
+    india_company: false
+    global_ok: false
+
+  - name: GitLab
+    ats: greenhouse
+    token: gitlab
+    category: FAANG+
+    india_company: false
+    global_ok: true   # remote-first company
+
+  - name: MongoDB
+    ats: greenhouse
+    token: mongodb
+    category: FAANG+
+    india_company: false
+    global_ok: false
+
+  - name: Confluent
+    ats: ashby
+    token: confluent
+    category: FAANG+
+    india_company: false
+    global_ok: false
+
+  - name: Datadog
+    ats: greenhouse
+    token: datadog
+    category: FAANG+
+    india_company: false
+    global_ok: false
+
+  - name: Fastly
+    ats: greenhouse
+    token: fastly
+    category: FAANG+
+    india_company: false
+    global_ok: false
+
+  - name: Okta
+    ats: greenhouse
+    token: okta
+    category: FAANG+
+    india_company: false
+    global_ok: false
+
+  - name: HubSpot
+    ats: greenhouse
+    token: hubspot
+    category: FAANG+
+    india_company: false
+    global_ok: false
+
+  - name: Reddit
+    ats: greenhouse
+    token: reddit
+    category: FAANG+
+    india_company: false
+    global_ok: false
+
+  - name: Discord
+    ats: greenhouse
+    token: discord
+    category: FAANG+
+    india_company: false
+    global_ok: false
+
+  - name: Notion
+    ats: ashby
+    token: notion
+    category: FAANG+
+    india_company: false
+    global_ok: false
+
+  - name: Vercel
+    ats: ashby
+    token: vercel
+    category: FAANG+
+    india_company: false
+    global_ok: true   # remote-first
+
+  - name: Netlify
+    ats: greenhouse
+    token: netlify
+    category: FAANG+
+    india_company: false
+    global_ok: true   # remote-first
+
+  - name: Elastic
+    ats: greenhouse
+    token: elastic
+    category: FAANG+
+    india_company: false
+    global_ok: false
+
+  - name: Stripe
+    ats: greenhouse
+    token: stripe
+    category: Fintech/Banking
+    india_company: false
+    global_ok: false
+
+  - name: Robinhood
+    ats: greenhouse
+    token: robinhood
+    category: Fintech/Banking
+    india_company: false
+    global_ok: false
+
+  - name: Figma
+    ats: greenhouse
+    token: figma
+    category: FAANG+
+    india_company: false
+    global_ok: false
+
+  - name: Plaid
+    ats: ashby
+    token: plaid
+    category: Fintech/Banking
+    india_company: false
+    global_ok: false
+
+  # ── AI / ML ────────────────────────────────────────────────────────────────
+  - name: OpenAI
+    ats: ashby
+    token: openai
+    category: AI/ML
+    india_company: false
+    global_ok: true
+
+  - name: Anthropic
+    ats: greenhouse
+    token: anthropic
+    category: AI/ML
+    india_company: false
+    global_ok: true
+
+  - name: Cohere
+    ats: ashby
+    token: cohere
+    category: AI/ML
+    india_company: false
+    global_ok: false
+
+  - name: Pinecone
+    ats: ashby
+    token: pinecone
+    category: AI/ML
+    india_company: false
+    global_ok: false
+
+  - name: Perplexity AI
+    ats: ashby
+    token: perplexity
+    category: AI/ML
+    india_company: false
+    global_ok: true
+
+  - name: Mistral AI
+    ats: lever
+    token: mistral
+    category: AI/ML
+    india_company: false
+    global_ok: false
+
+  - name: Stability AI
+    ats: greenhouse
+    token: stabilityai
+    category: AI/ML
+    india_company: false
+    global_ok: false
+
+  - name: Replit
+    ats: ashby
+    token: replit
+    category: AI/ML
+    india_company: false
+    global_ok: true   # remote-first
+
+  # ── HFT / Quant ────────────────────────────────────────────────────────────
+  - name: Jane Street
+    ats: greenhouse
+    token: janestreet
+    category: HFT/Quant
+    india_company: false
+    global_ok: true
+
+  - name: Optiver
+    ats: greenhouse
+    token: optiver
+    category: HFT/Quant
+    india_company: false
+    global_ok: true
+
+  - name: Tower Research Capital
+    ats: greenhouse
+    token: towerresearchcapital
+    category: HFT/Quant
+    india_company: false
+    global_ok: true
+
+  - name: IMC Trading
+    ats: greenhouse
+    token: imc
+    category: HFT/Quant
+    india_company: false
+    global_ok: true
+
+  - name: Akuna Capital
+    ats: greenhouse
+    token: akunacapital
+    category: HFT/Quant
+    india_company: false
+    global_ok: true
+
+  - name: Jump Trading
+    ats: greenhouse
+    token: jumptrading
+    category: HFT/Quant
+    india_company: false
+    global_ok: true
+
+  # ── Fintech / India ────────────────────────────────────────────────────────
+  - name: Groww
+    ats: greenhouse
+    token: groww
+    category: Fintech/India
+    india_company: true
+
+  - name: Navi
+    ats: ashby
+    token: navi
+    category: Fintech/India
+    india_company: true
+
+  - name: CRED
+    ats: lever
+    token: cred
+    category: Fintech/India
+    india_company: true
+
+  - name: Fi Money
+    ats: lever
+    token: epifi
+    category: Fintech/India
+    india_company: true
+
+  # ── Indian Unicorns ────────────────────────────────────────────────────────
+  - name: Meesho
+    ats: lever
+    token: meesho
+    category: Unicorns/India
+    india_company: true
+
+  - name: InMobi
+    ats: greenhouse
+    token: inmobi
+    category: Unicorns/India
+    india_company: true
+
+  # ── Consulting / IT ────────────────────────────────────────────────────────
+  - name: ThoughtWorks
+    ats: greenhouse
+    token: thoughtworks
+    category: Consulting/IT
+    india_company: false
+    global_ok: false
+
+  # ── Cybersecurity ──────────────────────────────────────────────────────────
+  - name: Zscaler
+    ats: greenhouse
+    token: zscaler
+    category: Cybersecurity
+    india_company: false
+    global_ok: false
+
+  - name: Rubrik
+    ats: greenhouse
+    token: rubrik
+    category: Cybersecurity
+    india_company: false
+    global_ok: false
+
+  - name: Neo4j
+    ats: greenhouse
+    token: neo4j
+    category: Cybersecurity
+    india_company: false
+    global_ok: false
+
+  - name: Redis
+    ats: ashby
+    token: redis
+    category: Cybersecurity
+    india_company: false
+    global_ok: false
+
+  - name: Snyk
+    ats: ashby
+    token: snyk
+    category: Cybersecurity
+    india_company: false
+    global_ok: false
+
+  # ── Enterprise / Industrial ────────────────────────────────────────────────
+  - name: SAP
+    ats: smartrecruiters
+    token: SAP
+    category: Consulting/IT
+    india_company: false
+    global_ok: false
+
+  - name: Bosch
+    ats: smartrecruiters
+    token: BoschGroup
+    category: Automotive
+    india_company: false
+    global_ok: false
+
+  # ── Analytics / Data ───────────────────────────────────────────────────────
+  - name: TigerGraph
+    ats: greenhouse
+    token: tigergraph
+    category: Analytics/Data
+    india_company: false
+    global_ok: false

@@ -1,0 +1,40 @@
+name: InternshipGOAT — Job Scanner
+
+on:
+  schedule:
+    # Runs every 10 minutes (GitHub Actions minimum is ~5 min; 10 is more stable)
+    - cron: '*/10 * * * *'
+  workflow_dispatch:   # lets you trigger manually from GitHub UI anytime
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to commit seen_jobs.json back
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run notifier
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python notifier.py
+
+      - name: Commit state files
+        run: |
+          git config user.name  "InternshipGOAT Bot"
+          git config user.email "goat-bot@users.noreply.github.com"
+          git add seen_jobs.json config.json companies.yaml
+          git diff --cached --quiet && echo "No changes to commit" || \
+            git commit -m "chore: update state [skip ci]" && git push

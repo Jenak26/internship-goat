@@ -1,0 +1,676 @@
+# InternshipGOAT — Manual Career Portals
+# Companies where no public ATS API exists.
+# These appear in /rolesactive as "check manually" links.
+# URLs are pre-filtered for India / internship where possible.
+
+portals:
+
+  # ── FAANG+ / Big Tech ──────────────────────────────────────────────────────
+  - name: Google
+    category: FAANG+
+    url: "https://careers.google.com/jobs/results/?q=intern&location=India&employment_type=INTERN"
+
+  - name: Meta
+    category: FAANG+
+    url: "https://www.metacareers.com/jobs?offices=India&roles=intern"
+
+  - name: Microsoft
+    category: FAANG+
+    url: "https://careers.microsoft.com/global/en/search-results?q=intern&l=India"
+
+  - name: Amazon
+    category: FAANG+
+    url: "https://www.amazon.jobs/en/search?country=IND&job_type=internship"
+
+  - name: Apple
+    category: FAANG+
+    url: "https://jobs.apple.com/en-us/search?location=india-IND&team=internships-STDNT-INTRN"
+
+  - name: NVIDIA
+    category: FAANG+
+    url: "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite?q=intern&locationHierarchy1=2fcb99c455831013ea52fb338f2932d8"
+
+  - name: Adobe
+    category: FAANG+
+    url: "https://careers.adobe.com/us/en/search-results?qkeyword=intern&qcountry=India"
+
+  - name: LinkedIn
+    category: FAANG+
+    url: "https://careers.linkedin.com/jobs?country=in&keywords=intern"
+
+  - name: Salesforce
+    category: FAANG+
+    url: "https://careers.salesforce.com/en/jobs/?search=intern&region=India"
+
+  - name: Oracle
+    category: FAANG+
+    url: "https://careers.oracle.com/jobs/#en/sites/jobsearch/jobs?keyword=intern&location=India"
+
+  - name: Cisco
+    category: FAANG+
+    url: "https://jobs.cisco.com/jobs/SearchJobs/intern?listFilterMode=1&location=India"
+
+  - name: IBM
+    category: FAANG+
+    url: "https://www.ibm.com/careers/search?field_keyword_08[0]=Intern&field_keyword_18[0]=India"
+
+  - name: VMware
+    category: FAANG+
+    url: "https://careers.vmware.com/main/jobs?keywords=intern&location=India"
+
+  - name: ServiceNow
+    category: FAANG+
+    url: "https://careers.servicenow.com/careers/jobs?keywords=intern&location=India"
+
+  - name: Atlassian
+    category: FAANG+
+    url: "https://www.atlassian.com/company/careers/all-jobs?search=intern&location=India"
+
+  - name: Intuit
+    category: FAANG+
+    url: "https://jobs.intuit.com/search-jobs/intern/India/29549/1/4/6254312/13/76/50/2"
+
+  - name: Akamai
+    category: FAANG+
+    url: "https://careers.akamai.com/careers/search?query=intern&location=India"
+
+  - name: Zoom
+    category: FAANG+
+    url: "https://careers.zoom.us/jobs/search?q=intern&location=India"
+
+  - name: Shopify
+    category: FAANG+
+    url: "https://www.shopify.com/careers/search?keywords=intern"
+
+  - name: Pinterest
+    category: FAANG+
+    url: "https://www.pinterestcareers.com/en/jobs/?search=intern"
+
+  - name: Canva
+    category: FAANG+
+    url: "https://www.canva.com/careers/jobs/?keyword=intern"
+
+  - name: Splunk
+    category: FAANG+
+    url: "https://www.splunk.com/en_us/careers/search-jobs.html?keyword=intern&location=India"
+
+  - name: Docker
+    category: FAANG+
+    url: "https://www.docker.com/careers/#open-positions"
+
+  # ── AI / ML ────────────────────────────────────────────────────────────────
+  - name: DeepMind
+    category: AI/ML
+    url: "https://deepmind.google/careers/jobs/?q=intern"
+
+  - name: Midjourney
+    category: AI/ML
+    url: "https://www.midjourney.com/careers"
+
+  # ── HFT / Quant ────────────────────────────────────────────────────────────
+  - name: Citadel
+    category: HFT/Quant
+    url: "https://www.citadel.com/careers/open-opportunities/?type=internships"
+
+  - name: Hudson River Trading
+    category: HFT/Quant
+    url: "https://www.hudsonrivertrading.com/careers/?_seniority=internship"
+
+  - name: Two Sigma
+    category: HFT/Quant
+    url: "https://careers.twosigma.com/careers/SearchJobs/intern"
+
+  - name: DE Shaw
+    category: HFT/Quant
+    url: "https://www.deshawindia.com/careers"
+
+  - name: SIG
+    category: HFT/Quant
+    url: "https://sig.com/careers/internships/"
+
+  - name: DRW
+    category: HFT/Quant
+    url: "https://drw.com/careers/listings/?filter-type=internship"
+
+  - name: Five Rings
+    category: HFT/Quant
+    url: "https://fiverings.com/careers/?type=internship"
+
+  - name: Millennium
+    category: HFT/Quant
+    url: "https://www.mlp.com/careers/internships/"
+
+  - name: Maven Securities
+    category: HFT/Quant
+    url: "https://www.mavensecurities.com/careers/"
+
+  - name: Graviton Research
+    category: HFT/Quant
+    url: "https://www.gravitonresearch.com/careers/"
+
+  - name: Quadeye
+    category: HFT/Quant
+    url: "https://quadeye.com/careers/"
+
+  - name: Alphagrep
+    category: HFT/Quant
+    url: "https://alpha-grep.com/careers/"
+
+  - name: WorldQuant
+    category: HFT/Quant
+    url: "https://www.worldquant.com/careers/"
+
+  - name: Flow Traders
+    category: HFT/Quant
+    url: "https://www.flowtraders.com/careers?type=internship"
+
+  - name: Wolverine Trading
+    category: HFT/Quant
+    url: "https://www.wolve.com/careers"
+
+  - name: Virtu Financial
+    category: HFT/Quant
+    url: "https://www.virtu.com/careers/"
+
+  # ── Fintech / Banking ──────────────────────────────────────────────────────
+  - name: Goldman Sachs
+    category: Fintech/Banking
+    url: "https://www.goldmansachs.com/careers/students/programs/india"
+
+  - name: JPMorgan
+    category: Fintech/Banking
+    url: "https://careers.jpmorgan.com/global/en/students/programs?search=&tags=location__India"
+
+  - name: Morgan Stanley
+    category: Fintech/Banking
+    url: "https://www.morganstanley.com/people-opportunities/students-graduates/programs"
+
+  - name: BlackRock
+    category: Fintech/Banking
+    url: "https://careers.blackrock.com/early-careers"
+
+  - name: Visa
+    category: Fintech/Banking
+    url: "https://jobs.smartrecruiters.com/Visa/intern+india"
+
+  - name: Mastercard
+    category: Fintech/Banking
+    url: "https://careers.mastercard.com/us/en/search-results?keywords=intern&location=India"
+
+  - name: American Express
+    category: Fintech/Banking
+    url: "https://aexp.eightfold.ai/careers?query=intern&location=India"
+
+  - name: PayPal
+    category: Fintech/Banking
+    url: "https://careers.paypal.com/jobs/search?keywords=intern&location=India"
+
+  - name: PhonePe
+    category: Fintech/India
+    url: "https://www.phonepe.com/careers/"
+
+  - name: Zerodha
+    category: Fintech/India
+    url: "https://zerodha.com/careers/"
+
+  - name: Slice
+    category: Fintech/India
+    url: "https://sliceit.com/careers"
+
+  - name: BharatPe
+    category: Fintech/India
+    url: "https://bharatpe.com/careers"
+
+  - name: Acko
+    category: Fintech/India
+    url: "https://www.acko.com/careers/"
+
+  - name: PolicyBazaar
+    category: Fintech/India
+    url: "https://www.policybazaar.com/careers/"
+
+  - name: Deutsche Bank
+    category: Fintech/Banking
+    url: "https://careers.db.com/professionals/search-roles/?search=intern&country=India"
+
+  - name: Barclays
+    category: Fintech/Banking
+    url: "https://search.jobs.barclays/search-jobs/intern/India/22545/1/4/6254312/13/76/50/2"
+
+  - name: UBS
+    category: Fintech/Banking
+    url: "https://www.ubs.com/global/en/careers/job-search.html?query=intern&location=India"
+
+  - name: HSBC
+    category: Fintech/Banking
+    url: "https://www.hsbc.com/careers/students-and-graduates"
+
+  - name: Wells Fargo
+    category: Fintech/Banking
+    url: "https://www.wellsfargojobs.com/en/jobs/search?keyword=intern&location=India"
+
+  - name: Bank of America
+    category: Fintech/Banking
+    url: "https://careers.bankofamerica.com/en-us/job-search/india"
+
+  - name: BNY Mellon
+    category: Fintech/Banking
+    url: "https://bnymellon.eightfold.ai/careers?query=intern&location=India"
+
+  - name: State Street
+    category: Fintech/Banking
+    url: "https://careers.statestreet.com/global/en/search-results?keywords=intern&location=India"
+
+  - name: Northern Trust
+    category: Fintech/Banking
+    url: "https://careers.northerntrust.com/jobs/search?q=intern&location=India"
+
+  - name: Fidelity
+    category: Fintech/Banking
+    url: "https://india.fidelity.com/careers/"
+
+  - name: Capital One
+    category: Fintech/Banking
+    url: "https://www.capitalonecareers.com/search-jobs/intern/India/1639/1"
+
+  - name: S&P Global
+    category: Fintech/Banking
+    url: "https://careers.spglobal.com/jobs?keywords=intern&location=India"
+
+  - name: FactSet
+    category: Fintech/Banking
+    url: "https://www.factset.com/careers/job-listings?keywords=intern&location=India"
+
+  # ── Indian Unicorns ────────────────────────────────────────────────────────
+  - name: Flipkart
+    category: Unicorns/India
+    url: "https://www.flipkartcareers.com/#!/joblist"
+
+  - name: Swiggy
+    category: Unicorns/India
+    url: "https://careers.swiggy.com/#jobs"
+
+  - name: Zomato
+    category: Unicorns/India
+    url: "https://www.zomato.com/careers"
+
+  - name: Blinkit
+    category: Unicorns/India
+    url: "https://blinkit.com/careers"
+
+  - name: Delhivery
+    category: Unicorns/India
+    url: "https://www.delhivery.com/careers/"
+
+  - name: Ola / Krutrim
+    category: Unicorns/India
+    url: "https://krutrim.com/careers"
+
+  - name: Paytm
+    category: Unicorns/India
+    url: "https://paytm.com/careers"
+
+  - name: PhysicsWallah
+    category: Unicorns/India
+    url: "https://pw.live/careers"
+
+  - name: Zoho
+    category: Unicorns/India
+    url: "https://careers.zoho.com/portal/zohorecruit"
+
+  - name: Dailyhunt
+    category: Unicorns/India
+    url: "https://www.naukri.com/verseinnovation-jobs"
+
+  - name: MPL
+    category: Unicorns/India
+    url: "https://www.mpl.live/careers"
+
+  - name: Gameskraft
+    category: Unicorns/India
+    url: "https://gameskraft.com/careers"
+
+  - name: Cars24
+    category: Unicorns/India
+    url: "https://www.cars24.com/careers/"
+
+  - name: Spinny
+    category: Unicorns/India
+    url: "https://www.spinny.com/careers/"
+
+  - name: OYO
+    category: Unicorns/India
+    url: "https://careers.oyorooms.com/"
+
+  - name: NoBroker
+    category: Unicorns/India
+    url: "https://www.nobroker.in/careers"
+
+  - name: Lenskart
+    category: Unicorns/India
+    url: "https://hiring.lenskart.com/"
+
+  - name: Nykaa
+    category: Unicorns/India
+    url: "https://www.nykaa.com/careers"
+
+  - name: Pocket FM
+    category: Unicorns/India
+    url: "https://pocketfm.com/careers"
+
+  - name: Apna
+    category: Unicorns/India
+    url: "https://apna.co/careers"
+
+  - name: Scaler
+    category: Unicorns/India
+    url: "https://www.scaler.com/careers/"
+
+  - name: Practo
+    category: Unicorns/India
+    url: "https://www.practo.com/company/careers"
+
+  - name: Vedantu
+    category: Unicorns/India
+    url: "https://www.vedantu.com/careers"
+
+  - name: Unacademy
+    category: Unicorns/India
+    url: "https://unacademy.com/careers"
+
+  - name: Porter
+    category: Unicorns/India
+    url: "https://porter.in/careers"
+
+  - name: Wakefit
+    category: Unicorns/India
+    url: "https://www.wakefit.co/careers"
+
+  - name: Gupshup
+    category: Unicorns/India
+    url: "https://www.gupshup.io/company/careers"
+
+  - name: Jupiter
+    category: Unicorns/India
+    url: "https://jupiter.money/careers/"
+
+  - name: Reliance Jio
+    category: Unicorns/India
+    url: "https://careers.jio.com/"
+
+  # ── Semiconductor ─────────────────────────────────────────────────────────
+  - name: AMD
+    category: Semiconductor
+    url: "https://careers.amd.com/careers/search?q=intern&location=India"
+
+  - name: Intel
+    category: Semiconductor
+    url: "https://jobs.intel.com/en/search-jobs/intern/India/1"
+
+  - name: Qualcomm
+    category: Semiconductor
+    url: "https://careers.qualcomm.com/careers/search?q=intern&location=India"
+
+  - name: ARM
+    category: Semiconductor
+    url: "https://careers.arm.com/search#q=intern&t=Jobs&l=India"
+
+  - name: Texas Instruments
+    category: Semiconductor
+    url: "https://careers.ti.com/jobs/search?q=intern&location=India"
+
+  - name: Micron
+    category: Semiconductor
+    url: "https://careers.micron.com/careers/search?q=intern&location=India"
+
+  - name: Broadcom
+    category: Semiconductor
+    url: "https://careers.broadcom.com/jobs/search?q=intern&location=India"
+
+  - name: NXP
+    category: Semiconductor
+    url: "https://nxp.wd3.myworkdayjobs.com/careers?q=intern&location=India"
+
+  - name: Synopsys
+    category: Semiconductor
+    url: "https://careers.synopsys.com/jobs/search?q=intern&location=India"
+
+  - name: Cadence
+    category: Semiconductor
+    url: "https://cadence.wd1.myworkdayjobs.com/External_Careers?q=intern&location=India"
+
+  - name: Applied Materials
+    category: Semiconductor
+    url: "https://careers.appliedmaterials.com/careers/search?q=intern&location=India"
+
+  - name: Lam Research
+    category: Semiconductor
+    url: "https://careers.lamresearch.com/careers/search?q=intern&location=India"
+
+  - name: MediaTek
+    category: Semiconductor
+    url: "https://careers.mediatek.com/eHire/Search?q=intern"
+
+  - name: Marvell
+    category: Semiconductor
+    url: "https://marvell.wd1.myworkdayjobs.com/MarvellCareers?q=intern&location=India"
+
+  - name: Samsung Research
+    category: Semiconductor
+    url: "https://research.samsung.com/careers"
+
+  - name: Western Digital
+    category: Semiconductor
+    url: "https://careers.westerndigital.com/jobs/search?q=intern&location=India"
+
+  - name: Analog Devices
+    category: Semiconductor
+    url: "https://careers.analog.com/jobs?q=intern&location=India"
+
+  - name: ASML
+    category: Semiconductor
+    url: "https://www.asml.com/en/careers/find-your-job#q=intern&numberOfResults=20&location=India"
+
+  - name: KLA
+    category: Semiconductor
+    url: "https://kla.wd1.myworkdayjobs.com/Search?q=intern&location=India"
+
+  # ── Consulting / IT Services ───────────────────────────────────────────────
+  - name: Accenture
+    category: Consulting/IT
+    url: "https://www.accenture.com/in-en/careers/explore-careers/area-of-interest/technology"
+
+  - name: Deloitte
+    category: Consulting/IT
+    url: "https://jobs2.deloitte.com/in/en/search-jobs?keywords=intern"
+
+  - name: PwC
+    category: Consulting/IT
+    url: "https://jobs.pwc.com/search-jobs/internship/India/932/1"
+
+  - name: EY
+    category: Consulting/IT
+    url: "https://careers.ey.com/ey/search/?q=intern&locationsearch=India"
+
+  - name: KPMG
+    category: Consulting/IT
+    url: "https://kpmg.com/in/en/home/careers.html"
+
+  - name: Capgemini
+    category: Consulting/IT
+    url: "https://www.capgemini.com/in-en/careers/job-search/?q=intern"
+
+  - name: Infosys
+    category: Consulting/IT
+    url: "https://www.infosys.com/careers/apply.html"
+
+  - name: TCS
+    category: Consulting/IT
+    url: "https://ibegin.tcs.com/iBegin/"
+
+  - name: Wipro
+    category: Consulting/IT
+    url: "https://careers.wipro.com/careers-home/"
+
+  - name: LTIMindtree
+    category: Consulting/IT
+    url: "https://www.ltimindtree.com/careers/"
+
+  - name: Tech Mahindra
+    category: Consulting/IT
+    url: "https://careers.techmahindra.com/search/?searchkeyword=intern"
+
+  - name: Persistent Systems
+    category: Consulting/IT
+    url: "https://www.persistent.com/careers/fresher-jobs/"
+
+  - name: Mphasis
+    category: Consulting/IT
+    url: "https://careers.mphasis.com/home.html"
+
+  - name: Nagarro
+    category: Consulting/IT
+    url: "https://www.nagarro.com/en/careers"
+
+  - name: GlobalLogic
+    category: Consulting/IT
+    url: "https://www.globallogic.com/careers/#jobs?keywords=intern"
+
+  - name: Publicis Sapient
+    category: Consulting/IT
+    url: "https://careers.publicissapient.com/jobs/search?q=intern&location=India"
+
+  - name: EPAM
+    category: Consulting/IT
+    url: "https://www.epam.com/careers/job-listings?query=intern&location=India"
+
+  - name: Cognizant
+    category: Consulting/IT
+    url: "https://careers.cognizant.com/global/en/c/fresher-jobs"
+
+  - name: Hexaware
+    category: Consulting/IT
+    url: "https://hexaware.com/careers/"
+
+  # ── Analytics / Data ───────────────────────────────────────────────────────
+  - name: Fractal Analytics
+    category: Analytics/Data
+    url: "https://fractal.ai/careers/"
+
+  - name: Mu Sigma
+    category: Analytics/Data
+    url: "https://www.mu-sigma.com/careers"
+
+  - name: Tiger Analytics
+    category: Analytics/Data
+    url: "https://www.tigeranalytics.com/careers/"
+
+  - name: Tredence
+    category: Analytics/Data
+    url: "https://www.tredence.com/careers"
+
+  - name: ZS Associates
+    category: Analytics/Data
+    url: "https://www.zs.com/careers/jobs?q=intern"
+
+  - name: EXL
+    category: Analytics/Data
+    url: "https://www.exlservice.com/careers"
+
+  - name: LatentView
+    category: Analytics/Data
+    url: "https://www.latentview.com/careers/"
+
+  - name: NielsenIQ
+    category: Analytics/Data
+    url: "https://nielseniq.com/global/en/careers/?q=intern"
+
+  # ── Automotive / Industrial ────────────────────────────────────────────────
+  - name: Rolls-Royce
+    category: Automotive
+    url: "https://careers.rolls-royce.com/jobs?q=intern&location=India"
+
+  - name: Airbus
+    category: Automotive
+    url: "https://airbus.wd3.myworkdayjobs.com/Airbus?q=intern&location=India"
+
+  - name: Boeing
+    category: Automotive
+    url: "https://jobs.boeing.com/search-jobs/intern/India"
+
+  - name: Mercedes-Benz R&D India
+    category: Automotive
+    url: "https://www.mbrdi.co.in/careers/"
+
+  - name: Siemens
+    category: Automotive
+    url: "https://jobs.siemens.com/careers?q=intern&location=India"
+
+  - name: Honeywell
+    category: Automotive
+    url: "https://careers.honeywell.com/us/en/search-results?keywords=intern&location=India"
+
+  - name: ABB
+    category: Automotive
+    url: "https://careers.abb/global/en/search-results?keywords=intern&location=India"
+
+  - name: GE Aerospace
+    category: Automotive
+    url: "https://jobs.gecareers.com/aviation/global/en/search-results?keywords=intern&location=India"
+
+  - name: Philips
+    category: Automotive
+    url: "https://www.careers.philips.com/in/en/search-results?keywords=intern"
+
+  - name: Sony India
+    category: Automotive
+    url: "https://www.sonyindiasoftware.co.in/careers"
+
+  - name: Rakuten India
+    category: Automotive
+    url: "https://rakuten.co.in/careers/"
+
+  - name: Ericsson
+    category: Automotive
+    url: "https://jobs.ericsson.com/careers?q=intern&location=India"
+
+  - name: Nokia
+    category: Automotive
+    url: "https://careers.nokia.com/jobs/search?q=intern&location=India"
+
+  - name: Juniper Networks
+    category: Automotive
+    url: "https://careers.juniper.net/careers/careers/SearchJobs/intern?listFilterMode=1&location=India"
+
+  - name: Continental
+    category: Automotive
+    url: "https://www.continental.com/en/career/jobs/?q=intern&location=India"
+
+  - name: Eaton
+    category: Automotive
+    url: "https://eaton.eightfold.ai/careers?query=intern&location=India"
+
+  - name: Emerson
+    category: Automotive
+    url: "https://hdjq.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/jobs?q=intern&location=India"
+
+  # ── Cybersecurity ──────────────────────────────────────────────────────────
+  - name: Palo Alto Networks
+    category: Cybersecurity
+    url: "https://jobs.paloaltonetworks.com/jobs/search?q=intern&location=India"
+
+  - name: Nutanix
+    category: Cybersecurity
+    url: "https://nutanix.eightfold.ai/careers?query=intern&location=India"
+
+  - name: Fortinet
+    category: Cybersecurity
+    url: "https://www.fortinet.com/corporate/careers/open-positions?keyword=intern&location=India"
+
+  - name: Check Point
+    category: Cybersecurity
+    url: "https://careers.checkpoint.com/positions?q=intern"
+
+  - name: Forcepoint
+    category: Cybersecurity
+    url: "https://www.forcepoint.com/company/careers"
