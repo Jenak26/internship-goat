@@ -1,0 +1,9 @@
+app = "internship-goat-bot"
+primary_region = "sin"
+
+[build]
+
+[env]
+# Secrets are set via: fly secrets set TELEGRAM_BOT_TOKEN=... TELEGRAM_CHAT_ID=...
+
+# No HTTP services — this is a pure background worker
